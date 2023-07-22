@@ -1,0 +1,38 @@
+:toc:
+:toc-placement: macro
+:toclevels: 4
+toc::[]
+//------------------------------------------------------------------------------------------//
+
+
+== *Concept*
+The ACFT Calculator is a terminal-based Python script that generates scores for the Army Combat Fitness Test (ACFT) based on input provided by the user. The program receives various inputs from the user, such as the name, rank, gender and age of the Soldier, in addition to the raw score for each attempted event of the ACFT. It then calculates the total score by using pre-defined dictionaries to convert the raw scores into event points, while taking into account both age and gender. Once all calculations are complete the application will present the final score and determines if the Soldier has passed or failed the test. 
+
+
+== *Procedure*
+This program was developed using the Python 3 language, therefore Python must first be installed on your device. Once it has been verified that Python has been successfully installed, the following files must be colocated within the same directory as the main script ('acft.py').
+
+* 'agerangetest.py': This module contains age ranges and functions that the application cross-references in order to appropriately correlate age-based calculations within the scoring standards.
+
+* 'mdlpoint.py': This module contains dictionaries that map the raw score of the maximum deadlift event to points based on age and gender.
+
+* 'sptpoints.py': This module contains dictionaries that map raw scores of the standing power throw event to points based on age and gender.
+
+* 'hrppoints.py': This module contains dictionaries that map raw scores of the hand-release pushup event to points based on age and gender.
+
+* 'sdcpoints.py' This module contains dictionaries that map raw scores of the sprint drag carry event to points based on age and gender.
+
+* 'plnkpoints.py' This module contains dictionaries that map raw scores of the plank event to points based on age and gender.
+
+* 'tmrpoints.py' This module contains dictionaries that map raw scores of the two-mile run event to points based on age and gender.
+
+To run the program, open a terminal window and navigate to the directory containing the files listed above. Once in the directory, type the following command to execute the program:
+
+ python3 acft.py
+
+Once the program has been executed, the user will be prompted to enter various details into the terminal about the Soldier, as well as the raw scores for each event. The program will then calculate the total score and determine if the Soldier has passed or failed the ACFT. 
+
+You will also be provided the option to save the test results to a text file. If you choose to save the results, the file will be saved in the same directory as the main script. The file will contain the data about the Soldier, as well as the raw scores and final score of the test, to the overall pass or fail outcome.
+
+If you choose not to save the results, the program will simply exit and you will be returned to the terminal prompt.
+
